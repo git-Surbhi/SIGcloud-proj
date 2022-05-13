@@ -20,7 +20,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             name = req_body.get('name')
 
     if name:
-        return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully.\n SUM of {val1} + {val2} = {s.sum(val1 , val2)} \n DIFF: {s.diff(val1 , val2)}")
+        return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully.\n *******CALCULATOR*******\nSUM of {val1} + {val2} = {s.sum(val1 , val2)} \n DIFFERENCE: {s.diff(val1 , val2)}\nMULTIPLY: {s.mul(val1 , val2)}\nDIVISION: {s.div(val1 , val2)}")
     else:
         return func.HttpResponse(
              "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.",
